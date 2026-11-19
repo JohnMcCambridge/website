@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="John McCambridge, New York.">
+<title>John McCambridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one screen, left-aligned card of name, role and links. */
+:root {
+  --bg: #f5f7f6;
+  --fg: #16201d;
+  --muted: #5a6763;
+  --line: #d9e0dd;
+  --accent: #1d6b55;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1513; --fg: #e3ebe7; --muted: #94a39e; --line: #26322e; --accent: #6cc7a4;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1513; --fg: #e3ebe7; --muted: #94a39e; --line: #26322e; --accent: #6cc7a4;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--mono);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+main {
+  max-width: 720px; min-height: 100%;
+  margin: 0 auto; padding-block: 64px;
+  display: flex; flex-direction: column; justify-content: center; gap: 22px;
+}
+.mark {
+  width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--accent); color: var(--bg);
+  font-family: var(--display); font-weight: 700; font-size: 17px;
+}
+h1 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(40px, 9vw, 76px); line-height: 1; letter-spacing: -0.02em;
+  margin: 0; text-wrap: balance;
+}
+.role { font-size: 15px; line-height: 1.6; color: var(--muted); margin: 0; max-width: 46ch; }
+.links { display: flex; flex-wrap: wrap; gap: 10px 26px; padding-top: 18px; border-top: 1px solid var(--line); margin: 0; list-style: none; padding-left: 0; font-size: 15px; }
+a { color: var(--fg); text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<main>
+  <div class="mark" aria-hidden="true">JM</div>
+  <h1>John McCambridge</h1>
+  <p class="role">AI strategy for banking, financial services and insurance at Dataiku. New York.</p>
+  <ul class="links">
+    <li><a href="https://www.linkedin.com/in/johnmccambridge" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="https://github.com/JohnMcCambridge" target="_blank" rel="noopener">GitHub</a></li>
+  </ul>
+</main>
+
+</body>
+</html>
